@@ -6,3 +6,14 @@ Sou estudante de Sistemas de Informação na Faculdade Estadual de Montes Claros
 
 \-  adicionar stack no README
 
+## Como rodar a API
+
+Instalar dependências:
+pip install fastapi uvicorn
+
+Rodar:
+uvicorn main:app --reload
+
+Acessar:
+http://localhost:8000
+
