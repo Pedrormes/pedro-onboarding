@@ -1,0 +1,27 @@
+[
+  {
+    "nome": "João Silva",
+    "email": "joao@email.com",
+    "cidade": "São Paulo"
+  },
+  {
+    "nome": "Maria Souza",
+    "email": "maria@email.com",
+    "cidade": "Rio de Janeiro"
+  },
+  {
+    "nome": "Carlos Lima",
+    "email": "carlos@email.com",
+    "cidade": "Belo Horizonte"
+  },
+  {
+    "nome": "Ana Costa",
+    "email": "ana@email.com",
+    "cidade": "Curitiba"
+  },
+  {
+    "nome": "Pedro Rocha",
+    "email": "pedro@email.com",
+    "cidade": "Salvador"
+  }
+]
