@@ -17,3 +17,16 @@ uvicorn main:app --reload
 Acessar:
 http://localhost:8000
 
+## Testando a API
+
+### Criar cliente
+
+curl -X POST http://localhost:8000/clientes ^
+-H "Content-Type: application/json" ^
+-d "{\"nome\":\"Pedro\",\"email\":\"pedro@email.com\",\"cidade\":\"Montes Claros\"}"
+
+### Listar clientes
+
+GET http://localhost:8000/clientes
+
+
