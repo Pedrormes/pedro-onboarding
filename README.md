@@ -6,58 +6,48 @@ Sou estudante de Sistemas de Informação na Faculdade Estadual de Montes Claros
 
 \-  adicionar stack no README
 
-## Como rodar a API
+# 🚀 API de Clientes
 
-Instalar dependências:
-pip install fastapi uvicorn
+## 📌 Sobre
 
-Rodar:
-uvicorn main:app --reload
+API desenvolvida com FastAPI para cadastro e listagem de clientes utilizando PostgreSQL.
 
-Acessar:
-http://localhost:8000
+---
 
-## Testando a API
+## ⚙️ Requisitos
 
-### Criar cliente
+- Python 3.x
+- PostgreSQL instalado e rodando
 
-curl -X POST http://localhost:8000/clientes ^
--H "Content-Type: application/json" ^
--d "{\"nome\":\"Pedro\",\"email\":\"pedro@email.com\",\"cidade\":\"Montes Claros\"}"
+---
 
-### Listar clientes
+## 📦 Instalação
 
-GET http://localhost:8000/clientes
+Clone o repositório:
 
-##  Como rodar o projeto
+git clone https://github.com/Pedrormes/pedro-onboarding.git
 
-### 1. Instalar dependências
+Entre na pasta:
+
+cd pedro-onboarding
+
+Instale dependências:
 
 pip install fastapi uvicorn psycopg2-binary
 
 ---
 
-### 2. Instalar e rodar o PostgreSQL
+## 🗄️ Banco de dados
 
-Instale o PostgreSQL e certifique-se que está rodando localmente.
-
----
-
-### 3. Criar banco de dados
-
-Abra o SQL Shell (psql) e execute:
+Criar banco:
 
 CREATE DATABASE clientes_db;
 
----
-
-### 4. Criar tabela
-
-Conecte no banco:
+Conectar:
 
 \c clientes_db
 
-Execute:
+Criar tabela:
 
 CREATE TABLE clientes (
     id SERIAL PRIMARY KEY,
@@ -69,38 +59,50 @@ CREATE TABLE clientes (
 
 ---
 
-### 5. Configurar variável de ambiente
+## 🔐 Variável de ambiente
 
-No Windows (CMD):
+No Windows:
 
 set DATABASE_URL=postgresql://postgres:SUA_SENHA@localhost:5432/clientes_db
 
 ---
 
-### 6. Rodar a API
+## ▶️ Como rodar
 
 python -m uvicorn main:app --reload
 
 ---
 
-### 7. Testar a API
+## 🌐 Endpoints
 
-Abra no navegador:
+### GET /
 
-http://localhost:8000/docs
+Retorna status da API
 
 ---
 
-###  Endpoints
+### GET /clientes
 
-GET /clientes → lista clientes  
-POST /clientes → cria cliente  
+Lista todos os clientes
 
-Exemplo de JSON para POST:
+---
 
-{
-  "nome": "Pedro",
-  "email": "pedro@email.com",
-  "cidade": "Montes Claros"
-}
+### POST /clientes
 
+Cria um cliente
+
+---
+
+## 🧪 Exemplos
+
+### Criar cliente (POST)
+
+curl -X POST http://localhost:8000/clientes ^
+-H "Content-Type: application/json" ^
+-d "{\"nome\":\"Pedro\",\"email\":\"pedro@email.com\",\"cidade\":\"Montes Claros\"}"
+
+---
+
+### Listar clientes (GET)
+
+curl http://localhost:8000/clientes
